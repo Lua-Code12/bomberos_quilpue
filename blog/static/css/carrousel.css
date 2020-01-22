@@ -1,0 +1,79 @@
+/*este es el contenedor del carrousel*/
+#contenedor-carrousel{
+    margin: auto;
+    width: 85%;
+    height: auto;
+    max-width: 1000px;
+    min-height: 120px;
+    max-height: 665px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff,
+                0   10px    20px;  
+}
+/*este es el contenedor de imagenes dentro del carrousel*/
+.contenedor-imagenes{
+    display: flex;
+    width: 500%;
+    height: auto;
+}
+
+#contenedor-imagenes{
+    display: flex;
+    width: 500%;
+    height: auto;
+}
+/*este es el contenedor de imagenes dentro del carrousel por secciones*/
+#contenedor-imagenes section{
+    width: 100%;
+    min-height: 120px;
+    max-height: 665px;
+}
+/*este es el contenedor de imagenes dentro del carrousel por secciones para cada imagen separada*/
+#contenedor-imagenes img{
+    display: block;
+    width: 100%;  
+    min-height: 120px;
+    max-height: 665px;
+}
+/*estos son los diseños del boton*/
+#btn-anterior, #btn-siguiente{
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    transform: translateX(0%);
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+}
+/*boton con color*/
+#btn-anterior:hover, #btn-siguiente:hover{
+    background: rgba(255, 255, 255, 0.8);
+ 
+}
+/*posicion del boton dentro del contendor*/
+#btn-anterior{
+    left:20px;
+ 
+}
+/*posicion del boton dentro del contendor*/
+#btn-siguiente{
+    right:20px;
+ 
+}
+
+@media screen and (max-width: 500px)
+{#btn-anterior, #btn-siguiente{
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+ 
+}
+}
