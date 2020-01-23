@@ -1,28 +1,138 @@
 {% load static %}
-<html>
-    <head>
-        <title>Compañía Esteban Santic</title>
-        <link rel="stylesheet" href="{% static 'blog/css/fontello.css' %}">
-        <link rel="stylesheet" href="{% static 'blog/css/formulario.css' %}">
-        <link rel="stylesheet" href="{% static 'blog/css/banner.css' %}">
-        <link rel="stylesheet" href="{% static 'blog/css/menu.css' %}">
-        <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-        
-        <link rel="shorcut icon" type="image/x-icon" href="{% static 'blog/imagenes/logo.ico' %}">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bomba Esteban Santic</title>
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/formulario.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carrousel.css">
+    <link rel="shorcut icon" type="image/x-icon" href="./imagenes/logo.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/regiones_comunas.js"></script>
+      
+<body>
+
+ <header>
+     <div class="contenedor">
+         <h1 class="icon-fire-station">BOMBA ESTEBAN SANTIC</h1>
+         <input type="checkbox" id="menu-bar">
+         <label class="icon-menu" for="menu-bar"></label>
+         <nav class="menu">
+             <a href="./historia.html" target="_blank">Historia</a>
+             <a href="">Equipo</a>
+             <a href="">Especialidades</a>
+             <a href="./galeria.html" target="_blank">Galeria</a>
+             <a href="./formulario.html" target="_blank">Postulación</a>
+             
+         </nav>
+
+     </div>
        
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Primera compañía de bomberos de Quilpué</a></h1>
-        </div>
-        <div class="content container">
-            <div class="row"> 
-                
-                {% block content %}
-                {% endblock %}
+    </header>
+
+    
+
+    <main>
+        <section id="banner">
+            <div  id="contenedor-carrousel">
+                <div class="contenedor-imagenes" id="contenedor-imagenes">
+                    <section>
+                        <img src="./imagenes/img_carrousel/bomberos_forestal.jpg" alt="bombero1" >
+                    </section>
+                    <section>
+                        <img src="./imagenes/img_carrousel/bomberos_postulacion.jpg" alt="bombero2" >
+                    </section>
+                    <section>
+                        <img src="./imagenes/img_carrousel/bomberos_quilpue.png" alt="bombero3">
+                    </section>
+                    <section>
+                        <img src="./imagenes/img_carrousel/Bomberos_rescate.jpg" alt="bombero4">
+                    </section>
+                    <section>
+                        <img src="./imagenes/img_carrousel/bomberos_fuego.jpg" alt="bombero5">
+                    </section>
                 </div>
+               
+                <div id="btn-anterior">&#60;</div>
+                <div id="btn-siguiente">&#62;</div>
+            </div>     
+            <script src="js/formulario.js"></script> 
+
+            <div class="contenedor2">
+                <h2>1° Compañía de bomberos de Quilpué</h2>
+                <p>BOMBA ESTEBAN SANTIC</p> 
+                
+                               
+            </div>
+            
+        </section>
+
+        <section id= "bienvenidos">
+            <h2>Bienvenidos a nuestro sitio</h2>
+            <p>La Primera compañía de bomberos de Quilpué nace un 8 de marzo de 1925, un grupo de vecinos quilpueínos, se reunieron en los salones del club “La Unión”, con un solo objetivo el cual era fundar la Primera Compañía de Bomberos de Quilpué, entre sus filas  se contaba con prestigiosos hombres como Don Esteban Santic y Don Lorenzo Lubet entre otros, vecinos que se entregaron en cuerpo y alma, al desarrollo de esta compañía.</p>
+
+
+        </section>
+
+        <section id="blog">
+            <h3> Noticias recientes</h3>
+            <div class="contenedor3">
+
+            {{% block contenido %}
+            
+            {% endblock contenido %}}
+                               
+
+            </div>
+
+        </section>
+
+
+        <section id="info">
+            <h2>Unidades activas en rescate</h2>
+            <div class="contenedor4">
+                <div class="info-unidad">
+                    <img src="./imagenes/unidad11.jpg" alt="unidad11">
+                    <h4>UNIDAD 11</h4>
+                </div>
+                <div class="info-unidad">
+                    <img src="./imagenes/unidad12.jpg" alt="unidad12">
+                    <h4>UNIDAD 12</h4>
+                </div>
+                <div class="info-unidad">
+                    <img src="./imagenes/unidad13.jpg" alt="unidad13">
+                    <h4>UNIDAD 13</h4>
+                </div>
+                
+            </div>       
+    
+        </section>
+
+
+        
+
+    </main>
+
+    <footer>
+        <div class="contenedor5">
+            <p class="copy">Bomba Esteban Santic &copy; 2020</p>
+            <div class="sociales">
+                <a class="icon-facebook-official" href="#"></a>
+                <a class="icon-twitter" href="#"></a>
+                <a class="icon-instagram" href="#"></a>
+                <a class="icon-mail" href="#"></a>
             </div>
         </div>
-    </body>
+        
+    </footer>
+     
+    
+</body>
 </html>
