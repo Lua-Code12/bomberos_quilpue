@@ -7,3 +7,5 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('galeria/', galeria, name="galeria")
 ]
+
+#preguntar por las clases y herencias posibles errores de tipeo
