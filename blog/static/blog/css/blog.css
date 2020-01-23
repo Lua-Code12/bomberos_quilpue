@@ -4,9 +4,13 @@
 }
 
 #blog h3 {
-    background: rgb(58, 103, 163);
+    background: rgb(58, 103, 163);  
+    color:#fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
-
 
 #blog .contenedor3 {
     display: flex;

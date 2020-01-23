@@ -13,7 +13,8 @@ form {
     border-radius: 7px;
 }
 
-h3 {
+h3 {    
+    background: rgb(58, 103, 163);  
     color:#fff;
     text-align: center;
     margin: 0;
