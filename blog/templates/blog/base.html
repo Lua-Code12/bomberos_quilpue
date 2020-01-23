@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bomba Esteban Santic</title>
-    <link rel="stylesheet" href="./css/fontello.css">
-    <link rel="stylesheet" href="./css/formulario.css">
-    <link rel="stylesheet" href="./css/banner.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/carrousel.css">
-    <link rel="shorcut icon" type="image/x-icon" href="./imagenes/logo.ico">
+    <link rel="stylesheet" href="{% static 'blog/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/formulario.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/carrousel.css' %}">
+    <link rel="shorcut icon" type="image/x-icon" href="{% static 'blog/imagenes/logo.ico' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="js/regiones_comunas.js"></script>
+    <script src="{% static 'blog/js/regiones_comunas.js' %}"></script>
       
 <body>
 
@@ -44,26 +44,26 @@
             <div  id="contenedor-carrousel">
                 <div class="contenedor-imagenes" id="contenedor-imagenes">
                     <section>
-                        <img src="./imagenes/img_carrousel/bomberos_forestal.jpg" alt="bombero1" >
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_forestal.jpg' %}" alt="bombero1" >
                     </section>
                     <section>
-                        <img src="./imagenes/img_carrousel/bomberos_postulacion.jpg" alt="bombero2" >
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_postulacion.jpg' %}" alt="bombero2" >
                     </section>
                     <section>
-                        <img src="./imagenes/img_carrousel/bomberos_quilpue.png" alt="bombero3">
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_quilpue.png' %}" alt="bombero3">
                     </section>
                     <section>
-                        <img src="./imagenes/img_carrousel/Bomberos_rescate.jpg" alt="bombero4">
+                        <img src="{% static 'blog/imagenes/img_carrousel/Bomberos_rescate.jpg' %}" alt="bombero4">
                     </section>
                     <section>
-                        <img src="./imagenes/img_carrousel/bomberos_fuego.jpg" alt="bombero5">
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_fuego.jpg' %}" alt="bombero5">
                     </section>
                 </div>
                
                 <div id="btn-anterior">&#60;</div>
                 <div id="btn-siguiente">&#62;</div>
             </div>     
-            <script src="js/formulario.js"></script> 
+            <script src="{% static 'blog/js/carrousel.js' %}"></script> 
 
             <div class="contenedor2">
                 <h2>1° Compañía de bomberos de Quilpué</h2>
@@ -99,15 +99,15 @@
             <h2>Unidades activas en rescate</h2>
             <div class="contenedor4">
                 <div class="info-unidad">
-                    <img src="./imagenes/unidad11.jpg" alt="unidad11">
+                    <img src="{% static 'blog/imagenes/unidad11.jpg' %}" alt="unidad11">
                     <h4>UNIDAD 11</h4>
                 </div>
                 <div class="info-unidad">
-                    <img src="./imagenes/unidad12.jpg" alt="unidad12">
+                    <img src="{% static 'blog/imagenes/unidad12.jpg' %}" alt="unidad12">
                     <h4>UNIDAD 12</h4>
                 </div>
                 <div class="info-unidad">
-                    <img src="./imagenes/unidad13.jpg" alt="unidad13">
+                    <img src="{% static 'blog/imagenes/unidad13.jpg' %}" alt="unidad13">
                     <h4>UNIDAD 13</h4>
                 </div>
                 
