@@ -1,0 +1,34 @@
+
+{% extends "blog/base.htmml" %}
+
+{% block  %}
+
+           <div  id="contenedor-carrousel">
+                <div class="contenedor-imagenes" id="contenedor-imagenes">
+                    <section>
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_forestal.jpg'% }" alt="bombero1" >
+                    </section>
+                    <section>
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_postulacion.jpg'% }" alt="bombero2" >
+                    </section>
+                    <section>
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_quilpue.png'% }" alt="bombero3">
+                    </section>
+                    <section>
+                        <img src="{% static 'blog/imagenes/img_carrousel/Bomberos_rescate.jpg'% }" alt="bombero4">
+                    </section>
+                    <section>
+                        <img src="{% static 'blog/imagenes/img_carrousel/bomberos_fuego.jpg'% }" alt="bombero5">
+                    </section>
+                </div>
+               
+                <div id="btn-anterior">&#60;</div>
+                <div id="btn-siguiente">&#62;</div>
+            </div>     
+            <script src="{% static 'blog/js/carrousel.js' %}"></script> 
+
+
+
+
+{% endblock  %}
+

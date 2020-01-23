@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/carrousel.css' %}">
     <link rel="shorcut icon" type="image/x-icon" href="{% static 'blog/imagenes/logo.ico' %}">
+     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   
       
 <body>
@@ -58,51 +59,29 @@
 
         </section>
 
-        <section id="blog">
-            <h3> Noticias recientes</h3>
-            <div class="contenedor3">
-                <article>
-                    <img src="./imagenes/noticia_1.jpg">
-                    <h5>Imágenes de accidente vehicular ocurrido en horas 
-                        de la mañana en calle San Martín esquina Covadonga 
-                        al que asistió Unidades CR-1 y 31, en el lugar c
-                        olisión de alta energía entre colectivo y microbus, 
-                        3 lesionados, 2 de ellos graves</h5>
-                </article>
-                <article>
-                    <img src="./imagenes/noticia_2.jpg">
-                    <h5>La tarde de este martes 7 de enero, 
-                        llevamos a cabo la tradicional romería 
-                        en homenaje a nuestro primer Mártir de Compañía, 
-                        bombero Sr. Edwin Guajardo Sanhueza Q.E.P.D.</h5>
-                </article>
-                <article>
-                    <img src="./imagenes/noticia_3.jpg">
-                    <h5>Esta madrugada, siendo los 06:09 hrs, 
-                        nuestra Guardia Nocturna atendió rescate 
-                        vehicular en calle Cummings. 
-                        Al lugar concurrieron Unidades CR-1 y 21.</h5>
-                </article>
-               
-
+        <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
             </div>
-
-        </section>
+            </div>
+        </div>
 
 
         <section id="info">
             <h2>Unidades activas en rescate</h2>
             <div class="contenedor4">
                 <div class="info-unidad">
-                    <img src="./imagenes/unidad11.jpg" alt="unidad11">
+                    <img src="{% static 'blog/imagenes/unidad11.jpg' %}" alt="unidad11">
                     <h4>UNIDAD 11</h4>
                 </div>
                 <div class="info-unidad">
-                    <img src="./imagenes/unidad12.jpg" alt="unidad12">
+                    <img src="{% static 'blog/imagenes/unidad12.jpg' %}" alt="unidad12">
                     <h4>UNIDAD 12</h4>
                 </div>
                 <div class="info-unidad">
-                    <img src="./imagenes/unidad13.jpg" alt="unidad13">
+                    <img src="{% static 'blog/imagenes/unidad13.jpg' %}" alt="unidad13">
                     <h4>UNIDAD 13</h4>
                 </div>
                 
