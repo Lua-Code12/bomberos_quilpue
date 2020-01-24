@@ -25,8 +25,8 @@ class Marca(models.Model):
     descripcion = models.CharField(max_length=200)
 
 class Automovil(models.Model):
-    patente = models.CharField(max_length=10, unique=true)
+    patente = models.CharField(max_length=10, unique=True)
     modelo = models.CharField(max_length=50)
-    anio = models.CharField()
-    marca = models.ForeignKey(Marca, on on_delete=models.CASCADE)
+    anio = models.IntegerField()
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
 
