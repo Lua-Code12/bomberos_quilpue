@@ -4,6 +4,7 @@ from .models import Post, Marca, Automovil
 class AutomovilAdmin(admin.ModelAdmin):
     list_display = ('patente', 'marca', 'anio', 'modelo')
     search_fields = ['patente', 'modelo']
+    list_filter = ('marca',)
 
 
 admin.site.register(Post)
