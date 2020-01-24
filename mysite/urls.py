@@ -20,3 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
 ]
+
+#personalización titulos del administrador
+admin.site.site_header = "Administración sitio web Esteban Santic"
