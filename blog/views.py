@@ -13,3 +13,6 @@ def post_detail(request, pk):
 
 def galeria(request):
     return render(request, 'blog/galeria.html')
+
+def formulario(request):
+    return render(request, 'blog/formulario.html')
