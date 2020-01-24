@@ -13,4 +13,3 @@ def post_detail(request, pk):
 
 def galeria(request):
     return render(request, 'blog/galeria.html')
-
