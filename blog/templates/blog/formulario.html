@@ -1,0 +1,29 @@
+
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+
+    {% load static %}
+
+    <form action="">
+        <h3>
+             POSTULACIÓN AÑO 2020.
+        </h3>
+        <input type="text" name="nombre" placeholder="Nombre Completo" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
+        <input type="text" id="rut" name='rut' placeholder="Ingresa tu rut" onblur="validarRut(this) " minlength="9" maxlength="10" required>
+        <input type="text" name="telefono" placeholder="Teléfono de contacto" required>
+        <input type="email" name="mail" placeholder="Correo electrónico" required>
+        <input type="date" name="fecha_nacimiento" required>
+        <select id="regiones" size="1" required>
+
+        </select>
+        <select id="comunas" size="1" required>
+
+        </select>
+        <input type="submit" value="ENVIAR" id="boton">
+
+    </form>
+
+
+{% endblock %}
