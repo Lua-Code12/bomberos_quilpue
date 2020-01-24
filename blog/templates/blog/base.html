@@ -1,6 +1,8 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+{% block head %}
+{% endblock %}
 <head>
 {% load static %}
     <meta charset="UTF-8">
@@ -31,9 +33,9 @@
              <a href="./historia.html" target="_blank">Historia</a>
              <a href="">Equipo</a>
              <a href="">Especialidades</a>
-             <a href="./galeria.html" target="_blank">Galeria</a>
+             <a href="./galeria.html">Galeria</a>
              <a href="./formulario.html" target="_blank">Postulación</a>
-             
+            
          </nav>
 
      </div>
@@ -69,15 +71,14 @@
                     
         </section>
 
-             <div class="content container">
-                <div class="row">
-                    <div class="col-md-8">
-                         {% block content %}
-                            {% endblock %}
-                     </div>
-                </div>
-            </div>
-       
+                      
+          
+            {% block content %}
+            {% endblock  %} 
+          
+
+            
+
 
         <section id="info">
             <h2>Unidades activas en rescate</h2>
