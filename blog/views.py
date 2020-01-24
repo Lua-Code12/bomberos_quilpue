@@ -16,3 +16,6 @@ def galeria(request):
 
 def formulario(request):
     return render(request, 'blog/formulario.html')
+
+def vehiculos(request):
+    return render(request, 'blog/vehiculos.html')

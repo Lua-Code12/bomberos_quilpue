@@ -1,0 +1,26 @@
+
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+
+    {% load static %}
+
+    <form action="">
+        <h3>
+             VEHICULOS DISPONIBLES
+        </h3>
+        <input type="text" name="nombre" placeholder="Nombre unidad">
+        <input type="text" id="patente" name='patente' placeholder="Ingresa patente del vehiculo">
+        <input type="text" name="marca" placeholder="Ingresa marca del vehiculo" required>
+        <input type="email" name="mail" placeholder="Correo electrónico" required>
+        
+        </select>
+        
+        </select>
+        <input type="submit" value="Consultar" id="boton">
+
+    </form>
+
+
+{% endblock %}
