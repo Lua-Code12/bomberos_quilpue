@@ -20,4 +20,13 @@ class Post(models.Model):
         return self.title
 
 
+class Marca(models.Model):
+    nombre = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=200)
+
+class Automovil(models.Model):
+    patente = models.CharField(max_length=10, unique=true)
+    modelo = models.CharField(max_length=50)
+    anio = models.CharField()
+    marca = models.ForeignKey(Marca, on on_delete=models.CASCADE)
 
