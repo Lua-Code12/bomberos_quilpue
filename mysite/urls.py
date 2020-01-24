@@ -22,4 +22,5 @@ urlpatterns = [
 ]
 
 #personalización titulos del administrador
-admin.site.site_header = "Administración sitio web Esteban Santic"
+admin.site.site_header = "Administración sitio web Compañia Esteban Santic"
+admin.site.index_title = "1° Compañia de bomberos Quilpué"

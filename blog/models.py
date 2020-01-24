@@ -30,7 +30,7 @@ class Marca(models.Model):
 class Automovil(models.Model):
     patente = models.CharField(max_length=10, unique=True)
     modelo = models.CharField(max_length=50)
-    anio = models.IntegerField()
+    anio = models.IntegerField(verbose_name='año')
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
 
     def __str__(self):
