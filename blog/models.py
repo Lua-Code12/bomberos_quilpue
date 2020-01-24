@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 # Create your models here.
 
+#Para realiar post en el sitio
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
@@ -19,6 +21,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+#Para realizar registro de automoviles
 
 class Marca(models.Model):
     nombre = models.CharField(max_length=50)
