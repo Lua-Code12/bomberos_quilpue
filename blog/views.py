@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post, Marca, Automovil
+from .models import Post, Automovil, Marca
 from django.shortcuts import render, get_object_or_404
 
 def post_list(request):
@@ -30,4 +30,4 @@ def listar_automoviles(request):
     return render(request, 'blog/listar_automoviles.html', autos)
     {
         'autos': autos
-    }
+    } 

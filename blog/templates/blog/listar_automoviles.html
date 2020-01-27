@@ -2,22 +2,31 @@
 
 {% block content %} 
 
-<h1>Listado de vehiculos de la compañía</h1>
+    <h1>Listado de vehiculos de la compañía</h1>
 
-<table>
+    <table>
 
-    <tr> 
-        <th>Patente</th>
-        <th>Marca</th>
-        <th>Modelo</th>
-        <th>año</th>       
+        <tr> 
+            <th>Patente</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>año</th>       
     
-    </tr>
+        </tr>
+        
+        {% for a in autos %}
 
+            <td>{{a.patente}}</td>
+            <td>{{a.marca}}</td>
+            <td>{{a.modelo}}</td>
+            <td>{{a.anio}}</td>
         
 
+        {% endfor %}    
+               
 
-</table>
+
+    </table>
 
 
 
