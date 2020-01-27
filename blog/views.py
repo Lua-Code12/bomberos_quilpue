@@ -20,6 +20,11 @@ def formulario(request):
 
 
 def vehiculos(request):
+
+    marcas = Marca.objects.all()
+    variables = {
+        'marcas':marcas
+    }
     return render(request, 'blog/vehiculos.html')
 
 
