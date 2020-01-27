@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
+from .models import Post, Marca, Automovil
 from django.shortcuts import render, get_object_or_404
 
 def post_list(request):
@@ -21,3 +21,13 @@ def formulario(request):
 def vehiculos(request):
     return render(request, 'blog/vehiculos.html')
 
+
+#CRUD de automoviles
+
+autos = Automovil.objects.all()
+
+def listar_automoviles(request):
+    return render(request, 'blog/listar_automoviles.html', autos)
+    {
+        'autos': autos
+    }
