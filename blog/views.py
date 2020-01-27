@@ -24,10 +24,12 @@ def vehiculos(request):
 
 #CRUD de automoviles
 
-autos = Automovil.objects.all()
 
 def listar_automoviles(request):
-    return render(request, 'blog/listar_automoviles.html', autos)
-    {
+
+    autos = Automovil.objects.all()
+
+    return render(request, 'blog/listar_automoviles.html', {
         'autos': autos
-    } 
+    })
+   
