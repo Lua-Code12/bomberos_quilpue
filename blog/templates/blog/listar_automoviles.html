@@ -10,23 +10,49 @@
             <th>Patente</th>
             <th>Marca</th>
             <th>Modelo</th>
-            <th>año</th>       
+            <th>año</th>   
+            <th>
+                Opciones
+            </th>     
     
         </tr>
-        
-        {% for a in autos %}
 
-            <td>{{a.patente}}</td>
-            <td>{{a.marca}}</td>
-            <td>{{a.modelo}}</td>
-            <td>{{a.anio}}</td>
-        
+        {% for a in autos %} 
 
-        {% endfor %}    
-               
+            <tr>
+            
+
+                <td>{{a.patente}}</td>
+                <td>{{a.marca}}</td>
+                <td>{{a.modelo}}</td>
+                <td>{{a.anio}}</td>
+                <td>
+                    <a href="{% url 'eliminar_automovil' a.id %}">Eliminar</div>
+                </td>
+                       
+
+             </tr>   
+
+        {% endfor %}      
 
 
     </table>
+
+    {% if messages %} 
+
+        {% for m in messages %}
+
+            <div>
+
+                {{m}}
+        
+            </div>
+
+        {% endfor %}
+
+      
+
+    {% endfor}
 
 
 
