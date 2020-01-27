@@ -2,6 +2,9 @@
 
 {% block content %} 
 
+     {% load static %}
+
+
     <h1>Listado de vehiculos de la compañía</h1>
 
     <table>
@@ -27,14 +30,12 @@
                 <td>{{a.modelo}}</td>
                 <td>{{a.anio}}</td>
                 <td>
-                    <a href="{% url 'eliminar_automovil' a.id %}">Eliminar</div>
+                    <a href="{% url 'eliminar_automovil' a.id %}">Eliminar</a>
                 </td>
-                       
-
+                     
              </tr>   
 
-        {% endfor %}      
-
+        {% endfor %}
 
     </table>
 
@@ -48,12 +49,8 @@
         
             </div>
 
-        {% endfor %}
+        {% endfor %}      
 
-      
-
-    {% endfor}
-
-
+    {% endif %}
 
 {% endblock %}

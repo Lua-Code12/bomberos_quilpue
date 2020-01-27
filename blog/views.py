@@ -49,6 +49,7 @@ def eliminar_automovil(request, id):
     except:
         mensaje = "No se ha podido eliminar"
         messages.error(request, mensaje)
-    return redirect('listado_automoviles')
+
+    return redirect('listar_autmoviles')
 
 
