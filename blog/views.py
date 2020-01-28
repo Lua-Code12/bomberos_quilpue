@@ -25,7 +25,24 @@ def vehiculos(request):
     variables = {
         'marcas':marcas
     }
-    return render(request, 'blog/vehiculos.html')
+
+    if request.POST:
+        auto = Automovil()
+        auto.patente = request.POST.get('txtPatente')
+        auto.modelo = request.POST.get('txtModelo')
+        auto.anio = request.POST.get('txtAnio')
+        marca = Marca()
+        marca.id = request.POST.get('cboMarca')
+        auto.marca = marca 
+
+        try:
+            auto.save()
+            variables['mensajes'] = 'Guardado correctamente'
+        except:
+            variables['mensaje'] = 'No se a podido guardar'
+            
+
+    return render(request, 'blog/vehiculos.html', variables)
 
 
 #CRUD de automoviles
