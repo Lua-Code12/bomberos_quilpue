@@ -27,7 +27,14 @@
 
             {% for m in marcas %}
 
-                <option value="{{ m.id }}">{{ m.nombre}}</option>
+                <option 
+                {% if m.id == auto.marca.id %}
+                {{'selected}} 
+                {% endif %}
+                
+                
+                
+                value="{{ m.id }}">{{ m.nombre}}</option>
 
             {% endfor %}           
 
