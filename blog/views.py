@@ -75,3 +75,14 @@ def eliminar_automovil(request, id):
     return redirect('listar_autmoviles')
 
 
+def modificar_automovil(request, id):
+    #buscamos el automovil para que el cuerpo de bomberos lo pueda modificar    
+    auto = Automovil.objects.get(id=id)
+    marcas = Marca.objects.all()
+    variables = {
+        'auto':auto,
+        'marcas':marcas 
+
+    }
+
+    return render(request, 'core/modificar_automovil.html', variables)
