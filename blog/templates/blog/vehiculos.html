@@ -9,26 +9,38 @@
     <form action="" id="formularioAutomovil" method="POST">
         
         <h3>
-             VEHICULOS DISPONIBLES
+             Modificar automovil
         </h3>
         
         {% csrf_token %}
-        <input type="text" name="nombre" placeholder="Nombre unidad">
-        <input type="text" id="patente" name='patente' placeholder="Ingresa patente del vehiculo" required>
+
+        <input type="hidden" name="txtId" id="txtId" value="{{ auto.id }}">
+
+        <label for="">Patente</label>
+        <input type="text" name="txtPatente" id="txtPatente" value="{{ auto.patente }}">
+        <br>
+        <label for="">Marca</label>
+
         <select name="cboMarca" id="cboMarca"> 
 
             <option velue="">Seleccionar </option>
 
+           
             {% for m in marcas %}
 
                 <option value="{{ m.id }}">{{ m.nombre}}</option>
 
             {% endfor %}
 
-            
 
         </select>
-        <input type="number" name="año" min="1925" max="2021" placeholder="Ingresa año del vehiculo">
+        <br>
+
+        <label for="">Modelo</label>
+        <input type="text" name="txtModelo" id="txtModelo" value="{{ auto.modelo }}">
+        <br>
+        <label for="">Año</label>
+        <input type="text" name="txtAnio" id="txtAnio" value="{{ auto.anio }}">
         
         </select>
         
