@@ -9,13 +9,12 @@
     <form action="" id="formularioAutomovil" method="POST">
         
         <h3>
-             Modificar automovil
+             Guardar un nuevo automovil.
         </h3>
         
         {% csrf_token %}
 
-        <input type="hidden" name="txtId" id="txtId" value="{{ auto.id }}">
-
+       
         <label for="">Patente</label>
         <input type="text" name="txtPatente" id="txtPatente" value="{{ auto.patente }}">
         <br>
