@@ -13,7 +13,7 @@
             <th>Patente</th>
             <th>Marca</th>
             <th>Modelo</th>
-            <th>año</th>   
+            <th>Año</th>   
             <th>
                 Opciones
             </th>     
@@ -31,8 +31,8 @@
                 <td>{{a.anio}}</td>
                 <td>
                     <a href="{% url 'eliminar_automovil' a.id %}">Eliminar</a>
-                    <a href="{% url 'modificar_automoviles' a.id %}">Modificar</a>
-                    
+                    <a href="{% url 'modificar_automovil' a.id %}">Modificar</a>
+
                 </td>
                      
              </tr>   

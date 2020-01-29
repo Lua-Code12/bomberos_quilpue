@@ -85,4 +85,22 @@ def modificar_automovil(request, id):
 
     }
 
+    if request.POST:
+        auto = Automovil()
+        auto.id = request.POST.get('txtId')
+        auto.patente = request.POST.get('txtPatente')
+        auto.modelo = request.POST.get('txtModelo')
+        auto.anio = request.POST.get('txtAnio')
+        marca = Marca()
+        marca.id = request.POST.get('cboMarca')
+        auto.marca = marca 
+
+        try:
+            auto.save()
+            messages.success(request, 'modificado correctamente')
+        except:
+            messages.error(request, 'no se ha podido modificar')
+        return redirect('listar_autmoviles')
+            
+
     return render(request, 'core/modificar_automovil.html', variables)
