@@ -20,7 +20,8 @@ def formulario(request):
 
 
 def login(request):
-    return render(request, 'blog/login.html')
+    return render(request, 'sabores_patrios/login.html',{})
+
 
 
 def vehiculos(request):
