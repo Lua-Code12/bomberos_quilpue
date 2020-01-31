@@ -19,6 +19,10 @@ def formulario(request):
     return render(request, 'blog/formulario.html')
 
 
+def login(request):
+    return render(request, 'blog/login.html')
+
+
 def vehiculos(request):
 
     marcas = Marca.objects.all()
