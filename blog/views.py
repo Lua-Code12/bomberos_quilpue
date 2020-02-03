@@ -3,6 +3,9 @@ from django.utils import timezone
 from .models import Post, Automovil, Marca
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, permission_required
+
+
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -23,7 +26,7 @@ def login(request):
     return render(request, 'sabores_patrios/login.html',{})
 
 
-
+@permission_required('blog.add_vehiculos') 
 def vehiculos(request):
 
     marcas = Marca.objects.all()

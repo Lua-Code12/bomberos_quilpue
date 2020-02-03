@@ -1,8 +1,8 @@
-var CACHE_NAME = 'compañia-bomberos-cache-v1';
+var CACHE_NAME = 'my-syte-cache-v1';
 var urlsToCache = [
     '/',
-    '/static/core/css/estilos.css',
-    '/static/core/img/logo.png',
+    '/static/blog/css/style.css',
+    '/static/blog/imagenes/bomberos_quilpue.jpg',
 ];
 
 self.addEventListener('install', function(event) {
@@ -18,14 +18,18 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(
-        caches.match(event.request).then(function(response) {
+        fetch(event.request)
+        .then(function(resul){
+          return caches.open(CACHE_NAME)
+          .then(function(c){
+            c.put(event.request.url, resul.clone())
+            return resul;
 
-          return fetch(event.request)
-          .catch(function(rsp) {
-             return response; 
-          });
-          
-          
+          })
+
+        })
+        .catch(function(e){
+          return caches.match(event.request)
         })
     );
 });
