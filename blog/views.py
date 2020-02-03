@@ -4,7 +4,8 @@ from .models import Post, Automovil, Marca
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
-
+from .forms import CustomUserForm
+from django.contrib.auth import login, authenticate
 
 
 def post_list(request):
@@ -21,9 +22,9 @@ def galeria(request):
 def formulario(request):
     return render(request, 'blog/formulario.html')
 
-
 def login(request):
-    return render(request, 'sabores_patrios/login.html',{})
+    return render(request, 'registration/login.html' )
+
 
 
 @permission_required('blog.add_vehiculos') 
@@ -111,4 +112,27 @@ def modificar_automovil(request, id):
         return redirect('listar_autmoviles')
             
 
-    return render(request, 'core/modificar_automovil.html', variables)
+    return render(request, 'blog/modificar_automovil.html', variables)
+
+
+
+def registro_usuario(request):
+	data = {
+		'form': CustomUserForm()	
+	}
+	
+	if request.method == 'POST':
+		formulario = CustomUserForm(request.POST)
+	
+		if 	formulario.is_valid():
+			formulario.save()
+			
+			#autenticar usuario y redireccionar al inicio 
+			username = formulario.cleaned_data('username')
+			password = formulario.cleaned_data('password')
+			user = authenticate(username=username, password=password)
+			login (request, user)
+			return redirect(to='base')
+					
+	
+	return render(request, 'registration/registar.html', data)

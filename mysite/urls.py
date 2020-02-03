@@ -20,9 +20,10 @@ from api.api import UserAPI
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
-    path('api/1.0/create_user/', UserAPI.as_view(), name = "api_create_user" ),
-    path('', include('pwa.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('api/1.0/create_user/', UserAPI.as_view(), name = "api_create_user"),
+    path('', include('pwa.urls')),
+    
 ]
 
 #personalización titulos del administrador

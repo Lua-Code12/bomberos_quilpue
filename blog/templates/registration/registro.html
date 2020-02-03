@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Registro de usuario</title>
 </head>
 <body>
-    <h2>Autenticación</h2>
+    <h2>Registro de usuarios</h2>
 	<form action="" method="POST">
 		{% csrf_token %}
-            {{ form | crispy }}
-
-        <input type="submit" value="login" class="btn.btn.success">
+		
+		<table>
+			{{form.as_table}}
+		
+		</table>
+		
+		<input type="submit" value="Limpiar">
+		<input type="submit" value="Registar">
 		
 	</form>
 		
