@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 #para redirección
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/vehiculos/'
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -50,10 +50,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'pwa',
-
+    'django.contrib.sites',
+    
 
 ]
 
+SITE_ID = 1
 
 
 MIDDLEWARE = [
