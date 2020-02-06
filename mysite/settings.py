@@ -51,11 +51,14 @@ INSTALLED_APPS = [
     'api',
     'pwa',
     'django.contrib.sites',
+    'crispy_forms',
     
-
 ]
 
 SITE_ID = 1
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 
 MIDDLEWARE = [
