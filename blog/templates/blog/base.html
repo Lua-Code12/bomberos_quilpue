@@ -2,9 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% load pwa %}
-{% progressive_web_app_meta %}
-
 {% block head %}
 {% endblock %}
 <head>
@@ -13,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bomba Esteban Santic</title>
+    {% load pwa %}
+    {% progressive_web_app_meta %}
     <link rel="stylesheet" href="{% static 'blog/css/fontello.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/formulario.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/banner.css' %}">
@@ -20,8 +19,9 @@
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/carrousel.css' %}">
     <link rel="shorcut icon" type="image/x-icon" href="{% static 'blog/imagenes/logo.ico' %}">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="manifest" href="{% static 'manifest.json' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="{% static 'blog/js/regiones_comunas.js' %}"></script>
     <script src="{% static 'blog/js/formulario.js' %}"></script>
     <script src="{% static 'blog/js/carrousel.js' %}"></script>
@@ -90,8 +90,7 @@
             {% block content %}
             {% endblock  %} 
           
-
-            
+           
 
 
         <section id="info">

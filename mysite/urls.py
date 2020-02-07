@@ -23,7 +23,8 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/1.0/create_user/', UserAPI.as_view(), name = "api_create_user"),
     path('', include('pwa.urls')),
-    
+    path('oauth/', include('social_django.urls', namespace='social')),
+
 ]
 
 #personalización titulos del administrador

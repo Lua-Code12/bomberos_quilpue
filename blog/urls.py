@@ -15,4 +15,4 @@ urlpatterns = [
     path('registro/', views.registro_usuario, name= "registro_usuario" ),
 
       
-    ]
+]

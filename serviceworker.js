@@ -1,4 +1,5 @@
-var CACHE_NAME = 'my-syte-cache-v1';
+//instalación e interceptación
+var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/',
     '/static/blog/css/style.css',
@@ -17,20 +18,23 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        fetch(event.request)
-        .then(function(resul){
-          return caches.open(CACHE_NAME)
-          .then(function(c){
-            c.put(event.request.url, resul.clone())
-            return resul;
+  event.respondWith(
 
-          })
+    fetch(event.request)
+    .then((result)=>{
+      return caches.open(CACHE_NAME)
+      .then(function(c) {
+        c.put(event.request.url, result.clone())
+        return result;
+      })
+      
+    })
+    .catch(function(e){
+        return caches.match(event.request)
+    })
 
-        })
-        .catch(function(e){
-          return caches.match(event.request)
-        })
-    );
+
+   
+  );
 });
 

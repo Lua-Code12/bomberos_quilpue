@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = '/vehiculos/'
 LOGOUT_REDIRECT_URL = '/'
 
+SOCIAL_AUTH_FACEBOOK_KEY = '2785164804875539'
+SOCIAL_AUTH_FACEBOOK_SECRET = '8052609a773150e69d29a618efd0d14a'
+
+
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
@@ -52,6 +56,7 @@ INSTALLED_APPS = [
     'pwa',
     'django.contrib.sites',
     'crispy_forms',
+    'social_django',
     
 ]
 
@@ -69,6 +74,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
+
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -84,6 +91,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+
             ],
         },
     },
@@ -129,6 +139,13 @@ AUTHENTICATION_BACKENDS = (
     
     # Metodo de autenticación especifico de allauth, como logear por email
    'allauth.account.auth_backends.AuthenticationBackend',
+
+    #metodo para ingresar con login de facebook
+
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+
+
 )
 
 
@@ -152,6 +169,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+AUTHENTICATION_BACKENDS = (
+
+)
 
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
+
+OFFLINE_MANIFEST = 'webapp.manifest'
