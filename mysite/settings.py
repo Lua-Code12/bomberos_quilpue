@@ -142,10 +142,6 @@ AUTHENTICATION_BACKENDS = (
 
     #metodo para ingresar con login de facebook
 
-    'social_core.backends.facebook.FacebookOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-
-
 )
 
 
@@ -170,7 +166,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 AUTHENTICATION_BACKENDS = (
-
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 

@@ -1,4 +1,14 @@
 //instalación e interceptación
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/',
