@@ -2,9 +2,9 @@
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('bomberos_quilpue/serviceworker.js')
         .then((reg) => {
-          console.log('Service worker registered.', reg);
+          console.log('Service worker registered.', registration);
         });
   });
 }
@@ -47,4 +47,10 @@ self.addEventListener('fetch', function(event) {
    
   );
 });
+
+function newFunction() {
+  <script src="/lib/jquery.min.js"></script>
+    ,
+    <script src="/lib/jquery.plugin.js"></script>;
+}
 

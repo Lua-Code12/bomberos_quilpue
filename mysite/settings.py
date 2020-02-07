@@ -174,3 +174,11 @@ AUTHENTICATION_BACKENDS = (
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
 
 OFFLINE_MANIFEST = 'webapp.manifest'
+
+EMAIL_USE_tls = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'pp814813@gmail.com'
+EMAIL_HOST_PASSWORD = 'prueba1234'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
